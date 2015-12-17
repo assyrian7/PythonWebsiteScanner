@@ -17,10 +17,10 @@ def gather_info(url):
     nmap = get_nmap('-F', ip_address)
     robots_txt = get_robots_txt(url)
     whois = get_whois(domain_name)
-    create_report(name, url, domain_name, nmap, robots_txt, whois)
+    create_report(url, domain_name, nmap, robots_txt, whois)
 
 def create_report(full_url, domain_name, nmap, robots_txt, whois):
-    project_dir = ROOT_DIR + '/' + name
+    project_dir = ROOT_DIR + '/' + domain_name
     create_dir(project_dir)
     write_file(project_dir + 'full_url.txt', full_url)
     write_file(project_dir + 'domain_name.txt', domain_name)

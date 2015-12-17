@@ -11,4 +11,4 @@ def get_robots_txt(url):
     return data.read()
 
 
-print(get_robots_txt("https://google.com"))
+
